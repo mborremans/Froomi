@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/stylesheet.css}"/>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
 </head>
 <body>
 <div class="navbarcss mb-2" th:fragment="header">
-    <nav class="navbar navbar-expand-sm">
-        <button class="navbar-toggler" type="button"
-                data-toggle="collapse"
-                data-target="#navbarN">
-            <i class="navbar-toggler-icon bg-dark"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarN">
-            <div class="navbar-nav">
-                <a class="nav-link" th:href="@{/home}">Home</a>
-                <a class="nav-link" th:href="@{/personenlijst}">Personen</a>
-                <a class="nav-link" th:href="@{/hobbielijst}">Themas</a>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">Tasks</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+            <a class="mx-auto" th:href="@{/}">
+                <img th:src="@{/pictures/logo_froomi.png}" class="img_in_nav">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+            <ul class="navbar-nav mr-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">Kot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">Tweedehands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">Map</a>
+                </li>
+            </ul>
         </div>
     </nav>
 </div>

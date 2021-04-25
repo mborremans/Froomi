@@ -1,0 +1,12 @@
+.navbarcss {
+    text-align: center;
+    font-size: 28px;
+}
+nav {
+    background: #B49EB8;
+}
+
+.img_in_nav {
+    width: 8%;
+    height: auto;
+}
