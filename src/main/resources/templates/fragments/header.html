@@ -9,7 +9,20 @@
 </head>
 <body>
 <div class="navbarcss mb-2" th:fragment="header">
-
+    <nav class="navbar navbar-expand-sm">
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarN">
+            <i class="navbar-toggler-icon bg-dark"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarN">
+            <div class="navbar-nav">
+                <a class="nav-link" th:href="@{/home}">Home</a>
+                <a class="nav-link" th:href="@{/personenlijst}">Personen</a>
+                <a class="nav-link" th:href="@{/hobbielijst}">Themas</a>
+            </div>
+        </div>
+    </nav>
 </div>
 </body>
 </html>
