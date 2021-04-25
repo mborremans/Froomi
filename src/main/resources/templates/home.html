@@ -7,9 +7,14 @@
 <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boop</title>
 </head>
 <body>
-<h1>boops?</h1>
+<div th:replace="fragments/header :: header">Header</div>
+
+
+
+<div th:replace="fragments/footer :: footer">Footer</div>
 </body>
 </html>
