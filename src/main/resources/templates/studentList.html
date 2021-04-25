@@ -11,7 +11,7 @@
     <div>
         <h2>Studenten</h2>
         <div th:each="student:${students}">
-            <a th:href="@{|/venuedetails/${studentStat.index}|}">
+            <a th:href="@{|/studentDetails/${studentStat.index + 1}|}">
                 <span th:text="${student.name}">student name</span>
             </a>
         </div>

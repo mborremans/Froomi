@@ -8,7 +8,23 @@
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 
+<div th:if="${student}">
+    <h2 th:text="${student.name}">studentDetails</h2>
+    <div>
+        <div>name: </div>
+        <div th:text="${student.name}"></div>
+    </div>
 
+    <div>
+        <div>street: </div>
+        <div th:text="${student.street}"></div>
+    </div>
+
+    <div>
+        <div>town: </div>
+        <div th:text="${student.town}"></div>
+    </div>
+</div>
 
 <div th:replace="fragments/footer :: footer">Footer</div>
 </body>
