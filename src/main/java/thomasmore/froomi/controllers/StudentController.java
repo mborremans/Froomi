@@ -18,7 +18,6 @@ public class StudentController {
     @GetMapping("/studentList")
     public String studentList(Model model){
         Iterable<Student> students = studentRepository.findAll();
-
         model.addAttribute("students", students);
         return "studentList";
     }
