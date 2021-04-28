@@ -2,21 +2,37 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}" href="../static/css/style.css"/>
-    <title>Studenten lijst</title>
+    <title>Students</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
 </head>
 <body>
-    <div th:replace="fragments/header :: header">Header</div>
-
-    <div>
-        <h2>Studenten</h2>
-        <div th:each="student:${students}">
-            <a th:href="@{|/studentDetails/${studentStat.index + 1}|}">
-                <span th:text="${student.name}">student name</span>
-            </a>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="fragments/header :: header">Header</div>
+    </div>
+    <div class="row">
+        <div class="col-xl-2"></div>
+        <div class="col-xl-8">
+            <h2>Studenten</h2>
+            <div class="col-xl-3" th:each="student:${students}">
+                <div class="card mt-3">
+                    <a th:href="@{|/studentDetails/${studentStat.index + 1}|}">
+                        <div class="card-body">
+                            <span th:text="${student.name}">studentenNaam</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div th:replace="fragments/footer :: footer">Footer</div>
+    <div class="row">
+        <div th:replace="fragments/footer :: footer">Footer</div>
+    </div>
+</div>
 </body>
 </html>
