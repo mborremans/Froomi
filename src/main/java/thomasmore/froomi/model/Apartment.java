@@ -8,6 +8,7 @@ public class Apartment {
     @Id
     private int id;
     private String address;
+    private String photo;
     private String location;
     private int price;
     private Boolean bathroomPresent;
@@ -31,6 +32,10 @@ public class Apartment {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getPhoto() { return photo; }
+
+    private void setPhoto(String photo) { this.photo = photo; }
 
     public String getLocation() {
         return location;

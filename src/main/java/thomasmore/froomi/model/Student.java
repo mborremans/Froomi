@@ -8,6 +8,7 @@ public class Student {
     @Id
     private int id;
     private String name;
+    private String photo;
     private String street;
     private String town;
 
@@ -30,6 +31,10 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getPhoto() { return photo; }
+
+    private void setPhoto(String photo) { this.photo = photo; }
 
     public String getStreet() {
         return street;
